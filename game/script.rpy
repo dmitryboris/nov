@@ -13,7 +13,7 @@ define characterdissolve = Dissolve(0.5)
   
 label start:
     scene black
-    show text "{size=50}{font=DejaVuSans-Bold.ttf}Хуй в жопе ентертеймент представляет...{/font}{/size}" with Dissolve(2.0)
+    show text "{size=50}{font=DejaVuSans-Bold.ttf}кто-то там представляет...{/font}{/size}" with Dissolve(2.0)
     hide text with Dissolve(2.0)
     
 label wake_up:
@@ -21,6 +21,7 @@ label wake_up:
     # queue sound "tower_clock.ogg"
     # queue sound "tower_clock.ogg"
     # queue sound "tower_clock.ogg"
+    "опять в школу(("
      
 
 label on_kitchen:
@@ -50,10 +51,10 @@ label go_home:
 
 
 label at_home:
-    scene hall
+    scene hall with fade
     show mom at center # mom_mad
     mom "Женя, ты опять ушел гулять, не сделав уроки?"
-    show mom at left with characterdissolve
+    show mom at right with characterdissolve
     show zhenya at left
     zhenya "Ну... дааа"
     mom "Иди делай, а я спать"
