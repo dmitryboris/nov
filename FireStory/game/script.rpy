@@ -36,7 +36,7 @@ label on_kitchen:
     mom "Проспал значит... давай бегом в школу!"
 
 label at_school:
-    scene class
+    scene classroom
     show zhenya at right with characterdissolve
     show teacher at center with characterdissolve
     hide zhenya
