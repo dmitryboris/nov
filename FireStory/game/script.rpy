@@ -1,5 +1,6 @@
 ﻿# Определение персонажей игры.
 define narrator = Character(what_italic=True)
+define nvl_narrator = Character(kind=nvl)
 define e = Character('OSEL', color="#c8ffc8")
 define zhenya = Character('Женя', color="#13678A")
 define zhenya_mad = Character('Женя', color="#13678A", what_size=38)
@@ -19,11 +20,18 @@ label start:
     hide text with Dissolve(2.0)
 
 label wake_up:
-    scene clock with clockdissolve
-    # queue sound "tower_clock.ogg"
-    # queue sound "tower_clock.ogg"
-    # queue sound "tower_clock.ogg"
-    "Опять в школу(("
+    scene start with clockdissolve
+    play sound "clock.mp3"
+    nvl_narrator "{cps=30}Женя с трудом открывает глаза.{/cps} \n"
+    define menu = nvl_menu
+    menu:
+        nvl_narrator "{cps=30}Идти в школу совсем не хочется.{/cps}"
+        "{u}Встать с постели{/u}.":
+
+            nvl clear
+
+
+    # hide text with Dissolve(2.0)
 
 
 label on_kitchen:
