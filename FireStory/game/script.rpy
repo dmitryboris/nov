@@ -25,11 +25,18 @@ label wake_up:
     nvl_narrator "{cps=30}Женя с трудом открывает глаза.{/cps} \n"
     define menu = nvl_menu
     menu:
-        nvl_narrator "{cps=30}Идти в школу совсем не хочется.{/cps}"
+        nvl_narrator "{cps=30}Идти в школу совсем не хочется.{/cps} \n"
         "{u}Встать с постели{/u}.":
 
             nvl clear
 
+    nvl_narrator "{cps=30}Поднявшись с постели, герой идет в ванную.{/cps} \n"
+    define menu = nvl_menu
+    menu:
+        nvl_narrator "{cps=30}Он смиренно вздохнул.{/cps} \n"
+        "{u}Умыться{/u}.":
+
+            nvl clear
 
     # hide text with Dissolve(2.0)
 
