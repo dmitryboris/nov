@@ -90,7 +90,7 @@ label fire:
     dad "Уходим"
     zhenya_mad "отпусти!! надо помочь маме!"
     scene fire2
-    "у вас мать сгорела"
+    narrator "мама погибла в огне"
 
 label next_act:
     scene black
