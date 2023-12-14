@@ -10,6 +10,7 @@ define dad = Character('Папа', color="#9AEBA3")
 define misha = Character('Миша', color="#DAFDBA")
 define team = Character('Команда', color="FF0000")
 
+define scenedissolve = Dissolve(2.0)
 define clockdissolve = Dissolve(3.0)
 define characterdissolve = Dissolve(0.5)
 # сделать анимации ухода, в пожар добавить людей мишу, релкас музик во время диалогов, возможно не стандартные расположения
@@ -17,9 +18,9 @@ define characterdissolve = Dissolve(0.5)
 label start:
     scene black
     show text "{size=50}{font=DejaVuSans-Bold.ttf}Cherti Entertainment presents{/font}{/size}" with Dissolve(2.0)
-    hide text with Dissolve(2.0)
+    hide text with scenedissolve
     show text "{size=50}{font=DejaVuSans-Bold.ttf}{cps=30}Акт 1. Начало{/cps]}{/font}{/size}" with Dissolve(2.0)
-    hide text with Dissolve(2.0)
+    hide text with scenedissolve
 
 
 label beginning:
@@ -72,7 +73,7 @@ label beginning:
     dad "Мы – счастливая семья, и это, включает быть заботливыми друг к другу и гарантировать безопасность каждому члену."
 
     show dad at center with characterdissolve
-    show mom at right
+    show mom at right with characterdissolve
 
     max "Я обещаю, что всегда буду следовать выученным правилам. Ведь знать, что делать в случае пожара – это крайне важно."
     mom "Мы верим в тебя, Максим. Ты уже вырос в ответственного и заботливого парня."
@@ -120,10 +121,10 @@ label fire:
 label second_act:
     scene black
     show text "{size=50}{font=DejaVuSans-Bold.ttf}Акт 2. Путь к исполнению мечты{/font}{/size}" with Dissolve(2.0)
-    hide text with Dissolve(2.0)
+    hide text with scenedissolve
 
 label yearning:
-    scene forest with Dissolve(2.0)
+    scene forest with scenedissolve
     play music forest fadein 1 volume 0.2
 
     narrator "Максим остается с отцом Александром, который с грустью смотрит на своего сына, понимая, как сильно они оба переживают по поводу утраты."
@@ -180,7 +181,7 @@ label studying:
 label third_act:
     scene black
     show text "{size=50}{font=DejaVuSans-Bold.ttf}Акт 3. Герои нашего времени{/font}{/size}" with Dissolve(2.0)
-    hide text with Dissolve(2.0)
+    hide text with scenedissolve
 
 label work:
     play music fire fadein 1 volume 0.2
@@ -206,14 +207,14 @@ label work:
     stop music fadeout 1
 
 label epilog:
-    scene main_menu with Dissolve(2.0)
+    scene main_menu with scenedissolve
     nvl_narrator "Максим становится известным в своем городе и получает благодарность от всех, кого он спас. \
     Город узнает его имя и историю о том, как он потерял мать, но нашел силы помогать людям."
     nvl_narrator "Максим становится примером надежды и вдохновения для других. Он понимает, что он принес пользу\
      обществу и всегда будет помогать людям в трудных ситуациях."
     nvl clear
 
-    play music witcher_relax fadein 1 volume 0.3
+    play music witcher_relax fadein 1 volume 0.1
     scene street
     show max at center
     show dad at right
@@ -227,5 +228,5 @@ label epilog:
     stop music fadeout 1
 
 label end:
-    scene main_menu with Dissolve(2.0)
+    scene main_menu with scenedissolve
     show text "{size=100}{font=DejaVuSans-Bold.ttf}The end{/font}{/size}" with Dissolve(2.0)
