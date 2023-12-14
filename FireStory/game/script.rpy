@@ -13,7 +13,6 @@ define team = Character('Команда', color="FF0000")
 define scenedissolve = Dissolve(2.0)
 define clockdissolve = Dissolve(3.0)
 define characterdissolve = Dissolve(0.5)
-# сделать анимации ухода, в пожар добавить людей мишу, релкас музик во время диалогов, возможно не стандартные расположения
 
 label start:
     scene black
